@@ -906,3 +906,47 @@ input[type="email"]:focus{
   .stickyBar__right{ width:100%; }
   .stickyBar__right .btn{ width:100%; }
 }
+/* ===== REAL BOOK COVERS (HERO) ===== */
+
+.heroBooks__grid--real {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.bookCover {
+  display: block;
+  border-radius: 16px;
+  background: #fff;
+  padding: 6px;
+  box-shadow:
+    0 10px 20px rgba(0,0,0,.15),
+    0 4px 8px rgba(0,0,0,.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.bookCover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* playful shelf tilt — subtle, storybook */
+.tilt1 { transform: rotate(-3deg); }
+.tilt2 { transform: rotate(1.5deg); }
+.tilt3 { transform: rotate(-1deg); }
+.tilt4 { transform: rotate(2.5deg); }
+
+.bookCover:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 18px 34px rgba(0,0,0,.22),
+    0 8px 16px rgba(0,0,0,.12);
+}
+
+/* Mobile adjustments */
+@media (max-width: 980px) {
+  .heroBooks__grid--real {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
