@@ -950,3 +950,241 @@ input[type="email"]:focus{
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* =========================================================
+   WONDER PATCH — make it feel storybook, not corporate
+   Paste at BOTTOM of styles.css
+========================================================= */
+
+:root{
+  --play: "Baloo 2", system-ui, sans-serif;
+
+  /* Slightly warmer + more magical */
+  --paper: #fff2dc;
+  --paper2:#fff8ea;
+
+  --ink: #1c2a3a;
+  --muted:#4b5a70;
+
+  --gold:#f7c157;
+  --gold2:#d7892b;
+
+  --blue:#1f78b8;
+  --blue2:#2f93d6;
+
+  --radius: 22px;
+  --radius2: 30px;
+}
+
+/* Global “storybook” texture (subtle) */
+body{
+  background:
+    radial-gradient(1200px 640px at 20% 8%, rgba(31,120,184,.14), transparent 60%),
+    radial-gradient(1000px 640px at 85% 4%, rgba(247,193,87,.22), transparent 58%),
+    radial-gradient(1200px 800px at 50% 120%, rgba(31,120,184,.10), transparent 62%),
+    linear-gradient(180deg, var(--paper2), var(--paper));
+}
+
+/* ---------- Announcement becomes a “ribbon” ---------- */
+.announce{
+  font-family: var(--play);
+  font-weight: 800;
+  letter-spacing: .2px;
+  background:
+    linear-gradient(90deg, rgba(247,193,87,.55), rgba(207,238,255,.78), rgba(247,193,87,.55));
+  border-bottom: 1px solid rgba(47,60,80,.14);
+  box-shadow: 0 6px 18px rgba(31,42,58,.08);
+  position: sticky;
+}
+.announce::before,
+.announce::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0;
+  width: 26px;
+  opacity: .65;
+  background:
+    radial-gradient(circle at 40% 50%, rgba(255,255,255,.8), transparent 62%),
+    radial-gradient(circle at 60% 50%, rgba(31,120,184,.18), transparent 62%);
+}
+.announce::before{ left: 10px; }
+.announce::after{ right: 10px; }
+
+.announce__sparkle{
+  display:inline-block;
+  transform: translateY(-1px);
+  animation: twinkle 2.8s ease-in-out infinite;
+  color: rgba(31,120,184,.75);
+}
+@keyframes twinkle{
+  0%,100%{ transform: translateY(-1px) scale(1); opacity: .85; }
+  50%{ transform: translateY(-2px) scale(1.08); opacity: 1; }
+}
+
+/* ---------- Header feels less “nav bar”, more “storybook top” ---------- */
+.header{
+  background: rgba(255,250,241,.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(47,60,80,.10);
+}
+.header::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:-1px;
+  height: 14px;
+  background:
+    radial-gradient(16px 10px at 8% 20%, rgba(31,120,184,.10), transparent 70%),
+    radial-gradient(18px 12px at 28% 70%, rgba(247,193,87,.14), transparent 70%),
+    radial-gradient(18px 12px at 58% 30%, rgba(31,120,184,.10), transparent 70%),
+    radial-gradient(18px 12px at 86% 75%, rgba(247,193,87,.14), transparent 70%),
+    linear-gradient(180deg, rgba(255,255,255,.0), rgba(0,0,0,.03));
+  pointer-events:none;
+}
+
+/* Brand text reads more “storybook” */
+.brand__name{
+  font-family: var(--serif);
+  letter-spacing: .2px;
+}
+.brand__tag{
+  font-family: var(--play);
+  font-weight: 700;
+  opacity: .92;
+}
+
+/* Nav links: less corporate pill, more “menu tabs” */
+.nav__link{
+  font-family: var(--play);
+  font-weight: 800;
+  background: transparent;
+}
+.nav__link:hover{
+  background: rgba(31,120,184,.10);
+  transform: translateY(-1px) rotate(-.15deg);
+}
+
+/* ---------- Buttons: enchanted seals ---------- */
+.btn{
+  font-family: var(--play);
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.btn--primary{
+  background:
+    radial-gradient(14px 10px at 20% 25%, rgba(255,255,255,.65), transparent 70%),
+    linear-gradient(180deg, rgba(255,255,255,.55), transparent 45%),
+    linear-gradient(135deg, rgba(247,193,87,.98), rgba(215,137,43,.98));
+  border-color: rgba(91,59,34,.22);
+  box-shadow:
+    0 18px 30px rgba(215,137,43,.22),
+    inset 0 1px 0 rgba(255,255,255,.55);
+}
+.btn--primary:hover{
+  transform: translateY(-2px) rotate(-.2deg);
+}
+.btn--ghost{
+  background:
+    radial-gradient(14px 10px at 20% 25%, rgba(255,255,255,.65), transparent 70%),
+    rgba(255,255,255,.75);
+  box-shadow: 0 14px 24px rgba(31,42,58,.08);
+}
+.btn--ghost:hover{
+  transform: translateY(-2px) rotate(.15deg);
+}
+
+/* ---------- Hero: more wonder (clouds + soft sparkles) ---------- */
+.hero__sky{
+  background:
+    radial-gradient(1100px 520px at 25% 20%, rgba(207,238,255,.92), transparent 62%),
+    radial-gradient(900px 520px at 78% 12%, rgba(247,193,87,.22), transparent 60%),
+    radial-gradient(820px 520px at 60% 40%, rgba(255,255,255,.55), transparent 62%),
+    linear-gradient(180deg, rgba(255,255,255,.62), transparent 50%);
+}
+
+/* Floating cloud blobs */
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+  width: 420px;
+  height: 240px;
+  border-radius: 999px;
+  opacity: .55;
+  pointer-events:none;
+  filter: blur(.2px);
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255,255,255,.80), transparent 62%),
+    radial-gradient(circle at 55% 45%, rgba(207,238,255,.75), transparent 62%),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,.70), transparent 62%);
+  animation: floaty 8.5s ease-in-out infinite;
+}
+.hero::before{ left: -120px; top: 110px; }
+.hero::after{ right: -160px; top: 70px; animation-duration: 10.5s; animation-delay: -2s; }
+
+@keyframes floaty{
+  0%,100%{ transform: translateY(0) translateX(0); }
+  50%{ transform: translateY(-10px) translateX(10px); }
+}
+
+/* Title: slightly more “storybook” */
+.h1{
+  text-shadow:
+    0 2px 0 rgba(255,255,255,.8),
+    0 12px 28px rgba(31,42,58,.10);
+}
+
+/* Trust cards: less glassy, more “storybook panels” */
+.trust__item,
+.card,
+.quoteCard,
+.stakesCard,
+.finalCard,
+.emailBox{
+  background:
+    radial-gradient(420px 220px at 20% 20%, rgba(247,193,87,.10), transparent 60%),
+    rgba(255,255,255,.82);
+  border-color: rgba(47,60,80,.10);
+}
+
+/* Hero character card: more “frame” */
+.heroCard{
+  border: 2px solid rgba(91,59,34,.16);
+  box-shadow:
+    0 22px 46px rgba(31,42,58,.14),
+    inset 0 1px 0 rgba(255,255,255,.55);
+}
+.heroCard__frame{
+  background:
+    radial-gradient(520px 260px at 50% 10%, rgba(247,193,87,.22), transparent 62%),
+    radial-gradient(520px 260px at 20% 70%, rgba(31,120,184,.12), transparent 62%),
+    rgba(255,255,255,.55);
+}
+.badge{
+  font-family: var(--play);
+  background: rgba(31,120,184,.10);
+  border-color: rgba(31,120,184,.18);
+}
+
+/* Book covers: add a little “collectible sticker” feel */
+.bookCover{
+  border: 2px solid rgba(91,59,34,.10);
+  background:
+    radial-gradient(14px 10px at 20% 25%, rgba(255,255,255,.65), transparent 70%),
+    rgba(255,255,255,.92);
+}
+.bookCover:hover{
+  transform: translateY(-8px) scale(1.04) rotate(-.4deg);
+}
+
+/* Sticky bar: look like a footer ribbon, not app bar */
+.stickyBar{
+  background: rgba(255,250,241,.90);
+  border-top: 1px solid rgba(47,60,80,.12);
+  box-shadow: 0 -10px 24px rgba(31,42,58,.10);
+}
+
+/* Optional: slightly soften section separators */
+.section--light{
+  border-top: 1px solid rgba(47,60,80,.08);
+  border-bottom: 1px solid rgba(47,60,80,.08);
+}
