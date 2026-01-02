@@ -93,10 +93,6 @@
       // Demo success (replace with your real integration)
       setMsg('You’re in. We’ll notify you when new adventures release.', 'ok');
       input.value = '';
-
-      // If you want to capture emails immediately without backend:
-      // You can redirect to a Mailchimp / ConvertKit hosted form URL here instead.
-      // window.location.href = 'YOUR_EMAIL_PROVIDER_FORM_URL';
     });
   }
 })();
