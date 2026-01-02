@@ -1188,3 +1188,235 @@ body{
   border-top: 1px solid rgba(47,60,80,.08);
   border-bottom: 1px solid rgba(47,60,80,.08);
 }
+/* =========================================================
+   STORYBOOK MOCKUP PATCH (paste at bottom of styles.css)
+   هدف: ornate frame + sparkles + parchment panels + shelf
+========================================================= */
+
+:root{
+  --storybook-ink: #1d2b3b;
+  --storybook-gold: #f5c15a;
+  --storybook-gold2:#d18a2b;
+  --storybook-cream:#fff3dc;
+  --storybook-cream2:#fff9ec;
+  --storybook-blue:#2f7fbf;
+
+  --panel: rgba(255,255,255,.86);
+  --panel2: rgba(255,255,255,.74);
+
+  --softShadow: 0 18px 42px rgba(23,33,46,.14);
+  --softShadow2: 0 10px 24px rgba(23,33,46,.10);
+}
+
+/* ---------- Overall page: more “storybook sky” ---------- */
+body{
+  background:
+    radial-gradient(1200px 680px at 20% 10%, rgba(70,150,210,.18), transparent 60%),
+    radial-gradient(900px 620px at 85% 8%, rgba(245,193,90,.22), transparent 58%),
+    radial-gradient(1200px 900px at 50% 120%, rgba(70,150,210,.12), transparent 62%),
+    linear-gradient(180deg, var(--storybook-cream2), var(--storybook-cream));
+}
+
+/* ---------- Ornate outer frame (like your mockup) ---------- */
+.storybookFrame{
+  position: fixed;
+  inset: 10px;
+  z-index: 999;
+  pointer-events: none;
+  border-radius: 28px;
+
+  /* gilded border look */
+  box-shadow:
+    0 0 0 2px rgba(209,138,43,.55),
+    0 0 0 8px rgba(255,255,255,.55),
+    0 0 0 10px rgba(209,138,43,.25),
+    0 24px 80px rgba(0,0,0,.18);
+
+  /* subtle corner flourishes via repeating radial highlights */
+  background:
+    radial-gradient(180px 130px at 0% 0%, rgba(245,193,90,.22), transparent 70%),
+    radial-gradient(180px 130px at 100% 0%, rgba(245,193,90,.22), transparent 70%),
+    radial-gradient(180px 130px at 0% 100%, rgba(245,193,90,.18), transparent 70%),
+    radial-gradient(180px 130px at 100% 100%, rgba(245,193,90,.18), transparent 70%);
+}
+
+/* Make sure content doesn’t touch the frame */
+main{ padding: 10px 0 0 0; }
+.container{ position: relative; }
+
+/* ---------- Sparkle layer (subtle, magical) ---------- */
+.sparkleLayer{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  opacity: .55;
+  background:
+    radial-gradient(2px 2px at 12% 18%, rgba(255,255,255,.8), transparent 60%),
+    radial-gradient(2px 2px at 24% 12%, rgba(255,255,255,.7), transparent 60%),
+    radial-gradient(2px 2px at 38% 22%, rgba(255,255,255,.6), transparent 60%),
+    radial-gradient(2px 2px at 58% 14%, rgba(255,255,255,.7), transparent 60%),
+    radial-gradient(2px 2px at 72% 20%, rgba(255,255,255,.75), transparent 60%),
+    radial-gradient(2px 2px at 86% 16%, rgba(255,255,255,.65), transparent 60%),
+    radial-gradient(3px 3px at 18% 34%, rgba(245,193,90,.55), transparent 65%),
+    radial-gradient(3px 3px at 64% 32%, rgba(245,193,90,.45), transparent 65%),
+    radial-gradient(3px 3px at 84% 36%, rgba(245,193,90,.35), transparent 65%);
+  animation: sparkleDrift 10s ease-in-out infinite;
+}
+
+@keyframes sparkleDrift{
+  0%,100%{ transform: translateY(0); filter: blur(0px); }
+  50%{ transform: translateY(-8px); filter: blur(.2px); }
+}
+
+/* ---------- Header: turn “nav bar” into “storybook header strip” ---------- */
+.header{
+  background: rgba(255,250,241,.88);
+  border-bottom: 1px solid rgba(40,56,76,.10);
+  box-shadow: 0 12px 26px rgba(23,33,46,.08);
+}
+.nav__link{
+  font-family: var(--play);
+  font-weight: 900;
+}
+.nav__link:hover{
+  background: rgba(47,127,191,.10);
+  transform: translateY(-1px) rotate(-.2deg);
+}
+
+/* ---------- Hero: more dreamy + framed character ---------- */
+.hero{
+  padding-top: clamp(34px, 6vw, 62px);
+}
+
+.hero__seriesLogo{
+  filter: drop-shadow(0 18px 26px rgba(23,33,46,.16));
+}
+
+.h1{
+  color: rgba(29,43,59,.96);
+  text-shadow:
+    0 2px 0 rgba(255,255,255,.85),
+    0 16px 38px rgba(23,33,46,.10);
+}
+
+/* Character card becomes “storybook portrait frame” */
+.heroCard{
+  border-radius: 26px;
+  border: 2px solid rgba(209,138,43,.22);
+  box-shadow: var(--softShadow);
+  background:
+    radial-gradient(900px 480px at 50% 0%, rgba(245,193,90,.18), transparent 60%),
+    rgba(255,255,255,.78);
+  overflow: hidden;
+}
+
+/* ornamental inner frame feel */
+.heroCard__frame{
+  padding: 16px;
+  background:
+    radial-gradient(540px 260px at 50% 10%, rgba(245,193,90,.22), transparent 62%),
+    radial-gradient(540px 260px at 20% 70%, rgba(47,127,191,.12), transparent 62%),
+    rgba(255,255,255,.55);
+}
+
+/* Make castle art feel like it’s behind glass */
+.heroCard__bg img{
+  opacity: .28;
+  filter: saturate(1.15) blur(.3px);
+  transform: scale(1.06);
+}
+
+/* Give Lawrence a “sticker pop” */
+.heroCard__art img{
+  filter: drop-shadow(0 18px 26px rgba(23,33,46,.20));
+}
+
+/* ---------- Replace “SaaS tiles” with parchment/scroll panels ---------- */
+.card, .quoteCard, .stakesCard, .finalCard, .emailBox, .trust__item, .feature{
+  border-radius: 22px;
+  border: 1px solid rgba(40,56,76,.10);
+  box-shadow: var(--softShadow2);
+  background:
+    radial-gradient(520px 260px at 20% 20%, rgba(245,193,90,.10), transparent 62%),
+    linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,255,255,.72));
+}
+
+/* Make quote card feel like “inset parchment” */
+.quoteCard{
+  border: 2px solid rgba(209,138,43,.16);
+}
+
+/* ---------- Book strip becomes “shelf + ribbon label” ---------- */
+.heroBooks{
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.heroBooks__label{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-family: var(--play);
+  font-weight: 900;
+  color: rgba(29,43,59,.92);
+  background:
+    radial-gradient(14px 10px at 20% 35%, rgba(255,255,255,.55), transparent 70%),
+    linear-gradient(135deg, rgba(245,193,90,.95), rgba(209,138,43,.95));
+  box-shadow: 0 16px 26px rgba(209,138,43,.20);
+  margin-bottom: 12px;
+}
+
+/* wooden shelf behind covers */
+.heroBooks__grid--real{
+  padding: 16px 14px;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.00) 42%),
+    linear-gradient(90deg, rgba(120,80,40,.18), rgba(120,80,40,.10), rgba(120,80,40,.18)),
+    radial-gradient(900px 120px at 50% 0%, rgba(255,255,255,.55), transparent 70%);
+  box-shadow: 0 18px 44px rgba(23,33,46,.12);
+}
+
+/* covers: a bit more playful + “collectible” */
+.bookCover{
+  border: 2px solid rgba(209,138,43,.10);
+  background:
+    radial-gradient(14px 10px at 20% 25%, rgba(255,255,255,.6), transparent 70%),
+    rgba(255,255,255,.94);
+}
+.bookCover:hover{
+  transform: translateY(-10px) scale(1.05) rotate(-.35deg);
+  box-shadow:
+    0 22px 46px rgba(0,0,0,.22),
+    0 10px 20px rgba(0,0,0,.12);
+}
+
+/* ---------- Buttons: “golden seal” not “app CTA” ---------- */
+.btn{
+  font-family: var(--play);
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+.btn--primary{
+  background:
+    radial-gradient(14px 10px at 18% 28%, rgba(255,255,255,.65), transparent 70%),
+    linear-gradient(180deg, rgba(255,255,255,.55), transparent 45%),
+    linear-gradient(135deg, rgba(245,193,90,.98), rgba(209,138,43,.98));
+  border-color: rgba(91,59,34,.22);
+  box-shadow:
+    0 18px 30px rgba(209,138,43,.22),
+    inset 0 1px 0 rgba(255,255,255,.55);
+}
+.btn--primary:hover{ transform: translateY(-2px) rotate(-.18deg); }
+.btn--ghost:hover{ transform: translateY(-2px) rotate(.12deg); }
+
+/* ---------- Sticky bar: “bottom ribbon” ---------- */
+.stickyBar{
+  background: rgba(255,250,241,.92);
+  border-top: 1px solid rgba(40,56,76,.10);
+  box-shadow: 0 -14px 30px rgba(23,33,46,.12);
+}
