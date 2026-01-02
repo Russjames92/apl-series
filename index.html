@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Adventures of Prince Lawrence | Christian Children's Book Series</title>
   <meta name="description" content="Faith-rooted children’s stories that shape courage, obedience, humility, and devotion to Christ. Explore The Adventures of Prince Lawrence." />
-  <meta name="theme-color" content="#0b2a4a" />
+  <meta name="theme-color" content="#1b6ea8" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,650,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,9 @@
 <body>
   <!-- Top announcement -->
   <div class="announce" role="status" aria-live="polite">
+    <span class="announce__sparkle" aria-hidden="true">✦</span>
     Parents: childhood is short. Stories stay. Choose wisely.
+    <span class="announce__sparkle" aria-hidden="true">✦</span>
   </div>
 
   <!-- Header -->
@@ -38,7 +40,9 @@
 
       <div class="header__actions">
         <a class="btn btn--ghost" href="#email">Get Updates</a>
-        <a class="btn btn--primary" id="btnAmazonTop" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn--primary" id="btnAmazonTop"
+           href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi"
+           target="_blank" rel="noopener noreferrer">
           View on Amazon
         </a>
       </div>
@@ -56,7 +60,9 @@
         <a class="mobileNav__link" href="#start">Start Here</a>
         <div class="mobileNav__actions">
           <a class="btn btn--ghost" href="#email">Get Updates</a>
-          <a class="btn btn--primary" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+          <a class="btn btn--primary"
+             href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi"
+             target="_blank" rel="noopener noreferrer">
             View on Amazon
           </a>
         </div>
@@ -67,7 +73,12 @@
   <!-- Hero -->
   <main id="top">
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__sky" aria-hidden="true"></div>
+
+      <!-- Decorative clouds / sparkles (pure CSS) -->
+      <div class="hero__decor hero__decor--left" aria-hidden="true"></div>
+      <div class="hero__decor hero__decor--right" aria-hidden="true"></div>
+
       <div class="container hero__inner">
         <div class="hero__left">
           <img class="hero__seriesLogo" src="logo.png" alt="The Adventures of Prince Lawrence logo" />
@@ -82,7 +93,9 @@
 
           <div class="hero__cta reveal">
             <a class="btn btn--primary btn--lg" href="#series">Explore the Prince Lawrence Series</a>
-            <a class="btn btn--ghost btn--lg" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn--ghost btn--lg"
+               href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi"
+               target="_blank" rel="noopener noreferrer">
               View on Amazon
             </a>
             <div class="hero__note">
@@ -104,13 +117,32 @@
               <div class="trust__text">Bedtime favorites that spark real conversations.</div>
             </div>
           </div>
+
+          <!-- OPTIONAL IMAGE PLACEHOLDERS (you can swap these later) -->
+          <div class="heroBooks reveal" aria-label="Book covers preview (optional)">
+            <div class="heroBooks__label">Perfect placeholders for your 4 covers:</div>
+            <div class="heroBooks__grid">
+              <div class="coverPh">Book 1 Cover</div>
+              <div class="coverPh">Book 2 Cover</div>
+              <div class="coverPh">Book 3 Cover</div>
+              <div class="coverPh">Book 4 Cover</div>
+            </div>
+            <div class="micro">Replace these with real cover PNGs (same size). They boost conversion a lot.</div>
+          </div>
         </div>
 
         <div class="hero__right reveal">
           <div class="heroCard">
-            <div class="heroCard__art">
-              <img src="prince-lawrence.png" alt="Prince Lawrence character art" />
+            <div class="heroCard__frame">
+              <div class="heroCard__bg">
+                <img src="castle-back.png" alt="" aria-hidden="true" />
+              </div>
+
+              <div class="heroCard__art">
+                <img src="prince-lawrence.png" alt="Prince Lawrence character art" />
+              </div>
             </div>
+
             <div class="heroCard__copy">
               <div class="badge">A forming hero</div>
               <h2 class="h3">Not just entertainment.</h2>
@@ -213,6 +245,7 @@
             <div class="imageFrame">
               <img src="castle-back.png" alt="Castle landscape background art" />
             </div>
+            <div class="micro imageFrame__caption">A story world made for wonder — and for formation.</div>
           </div>
 
           <div class="split__right reveal">
@@ -227,27 +260,19 @@
             <div class="miniList">
               <div class="miniList__item">
                 <div class="miniList__dot" aria-hidden="true"></div>
-                <div>
-                  <strong>courage</strong> that costs something
-                </div>
+                <div><strong>courage</strong> that costs something</div>
               </div>
               <div class="miniList__item">
                 <div class="miniList__dot" aria-hidden="true"></div>
-                <div>
-                  <strong>obedience</strong> that requires trust
-                </div>
+                <div><strong>obedience</strong> that requires trust</div>
               </div>
               <div class="miniList__item">
                 <div class="miniList__dot" aria-hidden="true"></div>
-                <div>
-                  <strong>humility</strong> formed through failure and growth
-                </div>
+                <div><strong>humility</strong> formed through failure and growth</div>
               </div>
               <div class="miniList__item">
                 <div class="miniList__dot" aria-hidden="true"></div>
-                <div>
-                  <strong>faith</strong> expressed through action, not clichés
-                </div>
+                <div><strong>faith</strong> expressed through action, not clichés</div>
               </div>
             </div>
 
@@ -325,16 +350,16 @@
       <div class="container">
         <div class="split">
           <div class="split__left reveal">
-            <h2 class="h2 h2--light">Childhood Is Short. Stories Stay.</h2>
-            <p class="p p--light">
+            <h2 class="h2">Childhood Is Short. Stories Stay.</h2>
+            <p class="p">
               Your children will not remember every toy.
               They <strong>will</strong> remember the characters they loved. The stories that stirred them. The heroes they wanted to be like.
             </p>
-            <p class="p p--light">
+            <p class="p">
               Those memories quietly shape who they become.
               One day, your children will face moments that require courage, obedience, humility, and faith — and the stories they grew up with will either support those virtues… or undermine them.
             </p>
-            <p class="p p--light">
+            <p class="p">
               Choosing better stories now is one of the simplest, most powerful investments a parent can make.
             </p>
           </div>
@@ -379,7 +404,9 @@
 
           <div class="seriesPanel__right">
             <div class="seriesPanel__cta">
-              <a class="btn btn--primary btn--lg btn--wide" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+              <a class="btn btn--primary btn--lg btn--wide"
+                 href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi"
+                 target="_blank" rel="noopener noreferrer">
                 View the Series on Amazon
               </a>
               <div class="micro">
@@ -394,7 +421,7 @@
       </div>
     </section>
 
-    <!-- Social proof (positioning statements) -->
+    <!-- Social proof -->
     <section class="section" id="proof">
       <div class="container">
         <div class="center">
@@ -443,7 +470,9 @@
             </p>
 
             <div class="ctaRow">
-              <a class="btn btn--primary btn--lg" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+              <a class="btn btn--primary btn--lg"
+                 href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi"
+                 target="_blank" rel="noopener noreferrer">
                 View the Prince Lawrence Series on Amazon
               </a>
               <a class="btn btn--ghost btn--lg" href="#email">Get updates on new releases</a>
@@ -466,7 +495,9 @@
               <div class="finalCard__body">
                 Choosing better stories now is one of the simplest, most powerful investments a parent can make.
               </div>
-              <a class="btn btn--primary btn--wide" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+              <a class="btn btn--primary btn--wide"
+                 href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi"
+                 target="_blank" rel="noopener noreferrer">
                 Get the Books on Amazon
               </a>
             </div>
@@ -512,7 +543,9 @@
             </div>
             <div class="footer__right">
               <a class="link" href="#top">Back to top ↑</a>
-              <a class="link" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">Amazon Series Page</a>
+              <a class="link"
+                 href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi"
+                 target="_blank" rel="noopener noreferrer">Amazon Series Page</a>
             </div>
           </div>
         </footer>
@@ -528,7 +561,9 @@
         <span class="stickyBar__sub">Get the series on Amazon in minutes.</span>
       </div>
       <div class="stickyBar__right">
-        <a class="btn btn--primary" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn--primary"
+           href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi"
+           target="_blank" rel="noopener noreferrer">
           View on Amazon
         </a>
         <a class="btn btn--ghost" href="#email">Get Updates</a>
