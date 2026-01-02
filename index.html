@@ -1,0 +1,541 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Adventures of Prince Lawrence | Christian Children's Book Series</title>
+  <meta name="description" content="Faith-rooted children’s stories that shape courage, obedience, humility, and devotion to Christ. Explore The Adventures of Prince Lawrence." />
+  <meta name="theme-color" content="#0b2a4a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,650,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top announcement -->
+  <div class="announce" role="status" aria-live="polite">
+    Parents: childhood is short. Stories stay. Choose wisely.
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Prince Lawrence Home">
+        <img class="brand__mark" src="short-logo.png" alt="Prince Lawrence crest logo" />
+        <div class="brand__text">
+          <div class="brand__name">Prince Lawrence</div>
+          <div class="brand__tag">Faith-rooted stories for forming hearts</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#series">The Series</a>
+        <a class="nav__link" href="#why">Why It Exists</a>
+        <a class="nav__link" href="#difference">What’s Different</a>
+        <a class="nav__link" href="#start">Start Here</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="#email">Get Updates</a>
+        <a class="btn btn--primary" id="btnAmazonTop" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+          View on Amazon
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav" hidden>
+      <div class="container mobileNav__inner">
+        <a class="mobileNav__link" href="#series">The Series</a>
+        <a class="mobileNav__link" href="#why">Why It Exists</a>
+        <a class="mobileNav__link" href="#difference">What’s Different</a>
+        <a class="mobileNav__link" href="#start">Start Here</a>
+        <div class="mobileNav__actions">
+          <a class="btn btn--ghost" href="#email">Get Updates</a>
+          <a class="btn btn--primary" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+            View on Amazon
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__left">
+          <img class="hero__seriesLogo" src="logo.png" alt="The Adventures of Prince Lawrence logo" />
+
+          <h1 class="h1 reveal">
+            Stories That Shape Who Your Children Become
+          </h1>
+
+          <p class="lead reveal">
+            The <strong>Adventures of Prince Lawrence</strong> is a faith-rooted children’s book series created for parents who want their sons and daughters formed by courage, obedience, humility, and devotion to Christ — not by noise, trends, or empty entertainment.
+          </p>
+
+          <div class="hero__cta reveal">
+            <a class="btn btn--primary btn--lg" href="#series">Explore the Prince Lawrence Series</a>
+            <a class="btn btn--ghost btn--lg" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+              View on Amazon
+            </a>
+            <div class="hero__note">
+              For families who refuse to outsource their children’s values.
+            </div>
+          </div>
+
+          <div class="trust reveal" role="group" aria-label="Trust highlights">
+            <div class="trust__item">
+              <div class="trust__title">Faith-rooted</div>
+              <div class="trust__text">Christian truth woven naturally into story.</div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__title">Character-forming</div>
+              <div class="trust__text">Virtues modeled through choices & consequences.</div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__title">Built to re-read</div>
+              <div class="trust__text">Bedtime favorites that spark real conversations.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right reveal">
+          <div class="heroCard">
+            <div class="heroCard__art">
+              <img src="prince-lawrence.png" alt="Prince Lawrence character art" />
+            </div>
+            <div class="heroCard__copy">
+              <div class="badge">A forming hero</div>
+              <h2 class="h3">Not just entertainment.</h2>
+              <p>
+                Prince Lawrence isn’t a flawless hero. He’s a forming one — because that’s how children learn courage, humility, and faith.
+              </p>
+              <a class="link" href="#why">Why this series exists →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__fade" aria-hidden="true"></div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section section--light" id="problem">
+      <div class="container">
+        <div class="split">
+          <div class="split__left reveal">
+            <h2 class="h2">Raising Children Has Never Been Harder — Not Because of a Lack of Stories, but Because of the Wrong Ones</h2>
+            <p class="p">
+              Every parent wants to believe the stories their children consume are harmless.
+            </p>
+            <p class="p">
+              But the truth is simple and uncomfortable: <strong>stories are never neutral.</strong>
+            </p>
+            <p class="p">
+              The books, shows, and characters our children love are quietly shaping how they see the world — what they admire, what they pursue, and what they believe is worth sacrificing for.
+            </p>
+
+            <div class="bullets">
+              <div class="bullet">prioritizes amusement over meaning</div>
+              <div class="bullet">celebrates self over service</div>
+              <div class="bullet">rewards comfort instead of character</div>
+            </div>
+
+            <p class="p">
+              And while it keeps children occupied, it rarely helps form them.
+              Most parents feel this tension — even if they can’t always articulate it. They sense that something important is missing.
+            </p>
+          </div>
+
+          <div class="split__right reveal">
+            <div class="quoteCard">
+              <div class="quoteCard__mark" aria-hidden="true">“</div>
+              <p class="quoteCard__text">
+                Most children’s entertainment isn’t neutral — it is formative.
+              </p>
+              <p class="quoteCard__sub">
+                If you don’t intentionally shape their imagination, something else will.
+              </p>
+              <a class="btn btn--primary btn--wide" href="#series">Show Me the Series</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parent role -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="center">
+          <h2 class="h2 reveal">If You Don’t Intentionally Shape Their Imagination, Something Else Will</h2>
+          <p class="p center__lead reveal">
+            You are not failing as a parent because culture is loud. But you <em>do</em> have a responsibility to be intentional.
+          </p>
+        </div>
+
+        <div class="grid3">
+          <div class="card reveal">
+            <h3 class="h4">Kids don’t absorb values through lectures.</h3>
+            <p class="p">
+              They absorb them through <strong>stories they love</strong>, characters they admire, and moments that stir their imagination.
+            </p>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="h4">The question isn’t whether they’re being shaped.</h3>
+            <p class="p">
+              The question is <strong>by what — and by whom.</strong>
+            </p>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="h4">Better stories are a simple, powerful upgrade.</h3>
+            <p class="p">
+              When you put meaningful stories in front of your kids, you don’t just fill time — you form identity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section--light" id="solution">
+      <div class="container">
+        <div class="split split--reverse">
+          <div class="split__left reveal">
+            <div class="imageFrame">
+              <img src="castle-back.png" alt="Castle landscape background art" />
+            </div>
+          </div>
+
+          <div class="split__right reveal">
+            <h2 class="h2">Why Prince Lawrence Exists</h2>
+            <p class="p">
+              The Adventures of Prince Lawrence was created for parents who want more than moral slogans and surface-level Christian content.
+            </p>
+            <p class="p">
+              These stories were written with intention — to present virtue as something lived, tested, and chosen.
+            </p>
+
+            <div class="miniList">
+              <div class="miniList__item">
+                <div class="miniList__dot" aria-hidden="true"></div>
+                <div>
+                  <strong>courage</strong> that costs something
+                </div>
+              </div>
+              <div class="miniList__item">
+                <div class="miniList__dot" aria-hidden="true"></div>
+                <div>
+                  <strong>obedience</strong> that requires trust
+                </div>
+              </div>
+              <div class="miniList__item">
+                <div class="miniList__dot" aria-hidden="true"></div>
+                <div>
+                  <strong>humility</strong> formed through failure and growth
+                </div>
+              </div>
+              <div class="miniList__item">
+                <div class="miniList__dot" aria-hidden="true"></div>
+                <div>
+                  <strong>faith</strong> expressed through action, not clichés
+                </div>
+              </div>
+            </div>
+
+            <p class="p">
+              Prince Lawrence is not a flawless hero. He is a forming one.
+              Because that’s how children learn.
+            </p>
+
+            <div class="ctaRow">
+              <a class="btn btn--primary" href="#start">Begin the Journey</a>
+              <a class="btn btn--ghost" href="#difference">What makes it different?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Difference -->
+    <section class="section" id="difference">
+      <div class="container">
+        <div class="center">
+          <h2 class="h2 reveal">This Series Is Different — On Purpose</h2>
+          <p class="p center__lead reveal">
+            Prince Lawrence doesn’t exist to compete with cartoons or trends. It exists to stand apart from them.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="feature reveal">
+            <div class="feature__icon" aria-hidden="true">✦</div>
+            <div class="feature__body">
+              <h3 class="h4">Faith-rooted without being preachy</h3>
+              <p class="p">Christian truth is woven naturally into story — engaging, sincere, and memorable.</p>
+            </div>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature__icon" aria-hidden="true">⚔︎</div>
+            <div class="feature__body">
+              <h3 class="h4">Imaginative without being shallow</h3>
+              <p class="p">A world your child loves — and a story that leaves them better than it found them.</p>
+            </div>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature__icon" aria-hidden="true">♛</div>
+            <div class="feature__body">
+              <h3 class="h4">Engaging without sacrificing truth</h3>
+              <p class="p">Meaningful themes that support what you’re already teaching at home.</p>
+            </div>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature__icon" aria-hidden="true">☾</div>
+            <div class="feature__body">
+              <h3 class="h4">Built to re-read and talk about</h3>
+              <p class="p">Made for bedtime, homeschool enrichment, and the quiet moments that matter.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="center">
+          <p class="p reveal">
+            These stories are meant to be read slowly. Revisited often. Talked about around dinner tables and at bedtime.
+            They invite conversation — not passive consumption.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stakes -->
+    <section class="section section--dark" id="stakes">
+      <div class="container">
+        <div class="split">
+          <div class="split__left reveal">
+            <h2 class="h2 h2--light">Childhood Is Short. Stories Stay.</h2>
+            <p class="p p--light">
+              Your children will not remember every toy.
+              They <strong>will</strong> remember the characters they loved. The stories that stirred them. The heroes they wanted to be like.
+            </p>
+            <p class="p p--light">
+              Those memories quietly shape who they become.
+              One day, your children will face moments that require courage, obedience, humility, and faith — and the stories they grew up with will either support those virtues… or undermine them.
+            </p>
+            <p class="p p--light">
+              Choosing better stories now is one of the simplest, most powerful investments a parent can make.
+            </p>
+          </div>
+
+          <div class="split__right reveal">
+            <div class="stakesCard">
+              <div class="stakesCard__title">The line that changes everything:</div>
+              <div class="stakesCard__big">
+                What your children admire today quietly shapes what they pursue tomorrow.
+              </div>
+              <a class="btn btn--primary btn--wide" href="#start">Start the Series</a>
+              <div class="stakesCard__sub">Easy ordering via Amazon.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Series -->
+    <section class="section section--light" id="series">
+      <div class="container">
+        <div class="center">
+          <h2 class="h2 reveal">A Growing Series for Growing Children</h2>
+          <p class="p center__lead reveal">
+            The Adventures of Prince Lawrence is not a one-off book. It is an unfolding journey — designed to accompany children through their formative years with consistent values, meaningful themes, and a world they can return to again and again.
+          </p>
+        </div>
+
+        <div class="seriesPanel reveal">
+          <div class="seriesPanel__left">
+            <img class="seriesPanel__logo" src="logo.png" alt="The Adventures of Prince Lawrence logo" />
+            <p class="p">
+              Parents often fold these stories into their family rhythm:
+            </p>
+            <div class="bullets bullets--soft">
+              <div class="bullet">bedtime reading</div>
+              <div class="bullet">homeschool enrichment</div>
+              <div class="bullet">shared discussion</div>
+              <div class="bullet">quiet moments that matter</div>
+            </div>
+          </div>
+
+          <div class="seriesPanel__right">
+            <div class="seriesPanel__cta">
+              <a class="btn btn--primary btn--lg btn--wide" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+                View the Series on Amazon
+              </a>
+              <div class="micro">
+                Available in trusted formats. Easy ordering. Designed to last.
+              </div>
+            </div>
+            <div class="seriesPanel__note">
+              <strong>Tip:</strong> If you want your children to love good stories, give them heroes worth admiring.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof (positioning statements) -->
+    <section class="section" id="proof">
+      <div class="container">
+        <div class="center">
+          <h2 class="h2 reveal">Why Parents Choose Prince Lawrence</h2>
+          <p class="p center__lead reveal">
+            Parents who choose this series are not looking for trends. They are looking for stories that align with their faith, characters their children can admire, and content that supports what they’re teaching at home.
+          </p>
+        </div>
+
+        <div class="grid3">
+          <div class="card card--quote reveal">
+            <p class="p">
+              “We needed stories that strengthened what we’re building at home — not stories that quietly fight us.”
+            </p>
+            <div class="micro">A common reason parents start the series</div>
+          </div>
+
+          <div class="card card--quote reveal">
+            <p class="p">
+              “This is the kind of bedtime reading that turns into real conversations.”
+            </p>
+            <div class="micro">What the books are designed to spark</div>
+          </div>
+
+          <div class="card card--quote reveal">
+            <p class="p">
+              “My kids love the world — and I love what the world is teaching them.”
+            </p>
+            <div class="micro">The win: engaging + aligned</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Start -->
+    <section class="section section--light" id="start">
+      <div class="container">
+        <div class="split">
+          <div class="split__left reveal">
+            <h2 class="h2">Begin the Prince Lawrence Journey</h2>
+            <p class="p">
+              If you’re searching for stories that honor your values, respect your children’s intelligence, and contribute to their spiritual and moral formation — you’ve found them.
+            </p>
+            <p class="p">
+              The Prince Lawrence series is available now through Amazon for easy, trusted ordering.
+            </p>
+
+            <div class="ctaRow">
+              <a class="btn btn--primary btn--lg" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+                View the Prince Lawrence Series on Amazon
+              </a>
+              <a class="btn btn--ghost btn--lg" href="#email">Get updates on new releases</a>
+            </div>
+
+            <div class="micro">
+              You only get one childhood with your children. The stories you choose today help shape the people they become tomorrow.
+            </div>
+          </div>
+
+          <div class="split__right reveal">
+            <div class="finalCard">
+              <div class="finalCard__header">
+                <img src="short-logo.png" alt="" class="finalCard__mark" aria-hidden="true" />
+                <div>
+                  <div class="finalCard__title">A quiet, firm reminder</div>
+                  <div class="finalCard__sub">for parents who care about formation</div>
+                </div>
+              </div>
+              <div class="finalCard__body">
+                Choosing better stories now is one of the simplest, most powerful investments a parent can make.
+              </div>
+              <a class="btn btn--primary btn--wide" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+                Get the Books on Amazon
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Email capture -->
+    <section class="section" id="email">
+      <div class="container">
+        <div class="emailBox reveal">
+          <div class="emailBox__left">
+            <h2 class="h2">Stay Connected to the Journey</h2>
+            <p class="p">
+              New Prince Lawrence adventures are on the way.
+              If you’d like updates on future releases, special editions, and resources for parents, join the mailing list.
+            </p>
+            <p class="micro">
+              We respect your inbox — and your time.
+            </p>
+          </div>
+
+          <form class="emailBox__form" id="emailForm" novalidate>
+            <label class="srOnly" for="emailInput">Email address</label>
+            <input id="emailInput" name="email" type="email" placeholder="your@email.com" autocomplete="email" required />
+            <button class="btn btn--primary" type="submit">Notify Me of New Adventures</button>
+            <div class="formMsg" id="formMsg" role="status" aria-live="polite"></div>
+            <div class="micro micro--muted">
+              By subscribing you agree to receive emails about the series. Unsubscribe anytime.
+            </div>
+          </form>
+        </div>
+
+        <footer class="footer">
+          <div class="footer__inner">
+            <div class="footer__left">
+              <img src="short-logo.png" alt="" aria-hidden="true" />
+              <div>
+                <div class="footer__name">The Adventures of Prince Lawrence</div>
+                <div class="micro micro--muted">Faith-rooted stories. Character formed. Childhood redeemed.</div>
+              </div>
+            </div>
+            <div class="footer__right">
+              <a class="link" href="#top">Back to top ↑</a>
+              <a class="link" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">Amazon Series Page</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky bottom bar -->
+  <div class="stickyBar" id="stickyBar">
+    <div class="container stickyBar__inner">
+      <div class="stickyBar__left">
+        <span class="stickyBar__label">Ready to start?</span>
+        <span class="stickyBar__sub">Get the series on Amazon in minutes.</span>
+      </div>
+      <div class="stickyBar__right">
+        <a class="btn btn--primary" href="https://www.amazon.com/dp/B0DKQR5TC5?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer">
+          View on Amazon
+        </a>
+        <a class="btn btn--ghost" href="#email">Get Updates</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
